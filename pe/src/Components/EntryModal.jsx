@@ -5,7 +5,7 @@ const EntryModal = ({ entry, onClose }) => {
   if (!entry) return null;
 
   return (
-    <div className="">
+    <div>
       <div className="">
         <span className="" onClick={onClose}>
           &times;

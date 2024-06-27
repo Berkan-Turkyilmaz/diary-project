@@ -67,7 +67,12 @@ const AddEntryModal = ({ onClose, onSave }) => {
             rows="4"
             required
           />
-          <button className="px-4 py-2 bg-gray-300 rounded mr-2">Cancel</button>
+          <button
+            onClick={onClose}
+            className="px-4 py-2 bg-gray-300 rounded mr-2"
+          >
+            Cancel
+          </button>
           <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
             Save
           </button>

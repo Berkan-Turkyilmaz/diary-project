@@ -4,7 +4,7 @@ const EntryList = ({ entries }) => {
   const [selectedEntry, setSelectedEntry] = useState(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:gird-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:gird-cols-3 gap-4 mt-4">
       {entries.map((entry, index) => (
         <div
           key={index}

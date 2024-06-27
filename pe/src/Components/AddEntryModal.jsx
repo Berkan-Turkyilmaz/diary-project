@@ -28,9 +28,7 @@ const AddEntryModal = ({ onClose, onSave }) => {
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
       <div className="bg-white p-6 rounded shadow-lg w-full max-w-md">
-        <span className="" onClick={onClose}>
-          &times;
-        </span>
+        <span onClick={onClose}>&times;</span>
         <h2 className="text-xl font-bold mb-4">Add New Entry</h2>
         <form onSubmit={handleSubmit}>
           <label className="block mb-2">Title:</label>
@@ -67,7 +65,13 @@ const AddEntryModal = ({ onClose, onSave }) => {
             rows="4"
             required
           />
-          <button className="px-4 py-2 bg-gray-300 rounded mr-2">Cancel</button>
+          <button
+            type="submit"
+            onClick={onClose}
+            className="px-4 py-2 bg-gray-300 rounded mr-2"
+          >
+            Cancel
+          </button>
           <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
             Save
           </button>

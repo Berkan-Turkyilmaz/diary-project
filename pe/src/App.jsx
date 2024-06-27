@@ -18,9 +18,17 @@ function App() {
   };
 
   return (
-    <div className="">
-      <header className="container mx-auto p-4">
-        <h1 className="text-2xl">Personal Diary</h1>
+    <div
+      className="h-32 w-full flex justify-between items-center"
+      style={{
+        backgroundImage:
+          'url("https://hopegrows.org/wp-content/uploads/2020/07/Calming-Influence-Of-Nature.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <header className="container mx-auto p-4 flex justify-between items-center mb-4">
+        <h1 className="text-2xl text-white">Personal Diary</h1>
         <button
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
           onClick={() => setIsAddEntryModalOpen(true)}

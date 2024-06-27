@@ -20,8 +20,13 @@ function App() {
   return (
     <div className="">
       <header className="container mx-auto p-4">
-        <h1 className="">Personal Diary Project</h1>
-        <button onClick={() => setIsAddEntryModalOpen(true)}>Add Entry</button>
+        <h1 className="text-2xl">Personal Diary</h1>
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+          onClick={() => setIsAddEntryModalOpen(true)}
+        >
+          Add Entry
+        </button>
       </header>
       <main>
         <EntryList entries={entries} />

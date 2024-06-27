@@ -1,10 +1,11 @@
 import { useState } from "react";
-
+import EntryModal from "./EntryModal.jsx";
 const EntryList = ({ entries }) => {
   const [selectedEntry, setSelectedEntry] = useState(null);
 
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:gird-cols-3 gap-4 mt-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
       {entries.map((entry, index) => (
         <div
           key={index}
@@ -18,9 +19,8 @@ const EntryList = ({ entries }) => {
             src={entry.imageUrl}
             alt="Preview"
           />
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-            View Details
-          </button>
+          
+         
         </div>
       ))}
       {selectedEntry && (

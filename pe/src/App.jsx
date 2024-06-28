@@ -5,7 +5,7 @@ import EntryList from "./Components/Entrylist";
 function App() {
   const [isAddEntryModalOpen, setIsAddEntryModalOpen] = useState(false);
   const [entries, setEntries] = useState([]);
-
+  const [oldest, setByOldest] = useState([]);
 
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function App() {
   };
 
   const sortAsc = () => {
-    const sortedAsc = entries.sort(function(a,b){
+    const sortedAsc = entries.toSorted(function(a,b){
       // Turn your strings into dates, and then subtract them
       // to get a value that is either negative, positive, or zero.
       //sorts by newest date
@@ -30,12 +30,12 @@ function App() {
     console.log(sortedAsc);
     setEntries(sortedAsc);
     
+    
   }
 
   
-
-   const sortDesc = () => {
-    const sortedDesc = entries.sort(function(a,b){
+  const sortDesc = () => {
+    const sortedDesc = entries.toSorted(function(a,b){
       // Turn your strings into dates, and then subtract them
       // to get a value that is either negative, positive, or zero.
       //sorts by oldest date
@@ -45,6 +45,8 @@ function App() {
     setEntries(sortedDesc);
     
   }
+    
+  
   
   return (
     <div>

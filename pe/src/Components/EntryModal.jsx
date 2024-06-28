@@ -25,33 +25,7 @@ const EntryModal = ({ entry, onClose }) => {
           Close
         </button>
 
-    /*      <p className="text-m font-semibold mb-4">Date: {entry.date}</p>
-        </div>
-
-        <div className="w-full mb-4 border rounded mx-1 flex justify-center">
-          {entry.imageUrl ? (
-            <img
-              className="w-full h-40 object-cover rounded"
-              src={entry.imageUrl}
-              alt={entry.title}
-            />
-          ) : (
-            <div className="w-full h-40 bg-gray-200 flex items-center justify-center rounded">
-              <span className="text-gray-500">No Image Available</span>
-            </div>
-          )}
-        </div>
-        <p className=" mx-1 w-full p-2 border rounded whitespace-normal break-words">
-          {entry.content}
-        </p>
-        <div className="flex justify-end mx-1 mt-2">
-          <button
-            onClick={onClose}
-            className="close-button px-4 py-2 bg-red-400 text-white rounded-[0.4rem] hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-opacity-50"
-          >
-            Close
-          </button>
-        </div> */
+    
 
       </div>
     </div>

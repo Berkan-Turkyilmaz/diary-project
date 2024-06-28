@@ -26,11 +26,12 @@ function App() {
       )
     ) {
       alert("An entry already exists for this date, please come back tomorrow");
-      return;
+      return null;
     }
     const updatedEntries = [...entries, newEntry];
     setEntries(updatedEntries);
-    localStorage.getItem("diaryEntries", JSON.stringify(updatedEntries));
+    localStorage.setItem("diaryEntries", JSON.stringify(updatedEntries));
+    setIsAddEntryModalOpen(false);
   };
 
   return (

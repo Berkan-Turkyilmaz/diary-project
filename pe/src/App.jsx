@@ -29,9 +29,12 @@ function App() {
     });
     console.log(sortedAsc);
     setEntries(sortedAsc);
+    
   }
 
-  const sortDesc = () => {
+  
+
+   const sortDesc = () => {
     const sortedDesc = entries.sort(function(a,b){
       // Turn your strings into dates, and then subtract them
       // to get a value that is either negative, positive, or zero.
@@ -40,8 +43,9 @@ function App() {
     });
     console.log(sortedDesc);
     setEntries(sortedDesc);
+    
   }
-
+  
   return (
     <div>
       <header

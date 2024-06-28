@@ -25,6 +25,7 @@ const EntryModal = ({ entry, onClose }) => {
             Close
           </button>
         </div>
+
       </div>
     </div>
   );

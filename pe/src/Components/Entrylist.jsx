@@ -4,8 +4,9 @@ import EntryModal from "./EntryModal";
 const EntryList = ({ entries }) => {
   const [selectedEntry, setSelectedEntry] = useState(null);
 
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:gird-cols-3 gap-4 mt-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
       {entries.map((entry, index) => (
         <div
           key={index}
@@ -19,6 +20,7 @@ const EntryList = ({ entries }) => {
             src={entry.imageUrl}
             alt="Preview"
           />
+
         </div>
       ))}
 

@@ -34,8 +34,10 @@ function App() {
           Add Entry
         </button>
       </header>
-      <main>
-        <EntryList entries={entries} />
+      <main >
+        
+          <EntryList entries={entries} />
+         
         {isAddEntryModalOpen && (
           <AddEntryModal
             onClose={() => setIsAddEntryModalOpen(false)}

@@ -4,9 +4,8 @@ import EntryModal from "./EntryModal";
 const EntryList = ({ entries }) => {
   const [selectedEntry, setSelectedEntry] = useState(null);
 
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4 bg-white">
       {entries.map((entry, index) => (
         <div
           key={index}
@@ -15,12 +14,17 @@ const EntryList = ({ entries }) => {
         >
           <h2 className="text-xl font-bold mb-2">{entry.title}</h2>
           <p className="text-gray-500">Date: {entry.date}</p>
-          <img
-            className="w-[60%] h-40 object-cover rounded"
-            src={entry.imageUrl}
-            alt="Preview"
-          />
-
+          {entry.imageUrl ? (
+            <img
+              className="w-full h-40 object-cover rounded"
+              src={entry.imageUrl}
+              alt={entry.title}
+            />
+          ) : (
+            <div className="w-full h-40 bg-gray-200 flex items-center justify-center rounded">
+              <span className="text-gray-500">No Image Available</span>
+            </div>
+          )}
         </div>
       ))}
 

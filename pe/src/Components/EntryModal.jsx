@@ -12,7 +12,17 @@ const EntryModal = ({ entry, onClose }) => {
         </div>
 
         <div className="w-full mb-4 border rounded mx-1 flex justify-center">
-          <img src={entry.imageUrl} alt="Full entry" />
+          {entry.imageUrl ? (
+            <img
+              className="w-full h-40 object-cover rounded"
+              src={entry.imageUrl}
+              alt={entry.title}
+            />
+          ) : (
+            <div className="w-full h-40 bg-gray-200 flex items-center justify-center rounded">
+              <span className="text-gray-500">No Image Available</span>
+            </div>
+          )}
         </div>
         <p className=" mx-1 w-full p-2 border rounded whitespace-normal break-words">
           {entry.content}
@@ -25,7 +35,6 @@ const EntryModal = ({ entry, onClose }) => {
             Close
           </button>
         </div>
-
       </div>
     </div>
   );

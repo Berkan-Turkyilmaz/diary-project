@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="bg-[#E5E5E5]">
       <header
         className="mx-0 flex justify-between items-center p-4 h-32"
         style={{

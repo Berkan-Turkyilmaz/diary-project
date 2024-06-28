@@ -1,5 +1,6 @@
 import { useState } from "react";
-import EntryModal from "./EntryModal.jsx";
+import EntryModal from "./EntryModal";
+
 const EntryList = ({ entries }) => {
   const [selectedEntry, setSelectedEntry] = useState(null);
 
@@ -19,10 +20,10 @@ const EntryList = ({ entries }) => {
             src={entry.imageUrl}
             alt="Preview"
           />
-          
-         
+
         </div>
       ))}
+
       {selectedEntry && (
         <EntryModal
           entry={selectedEntry}

@@ -10,17 +10,22 @@ const EntryModal = ({ entry, onClose }) => {
           <h2 className="text-xl font-bold mb-4 text-center">{entry.title}</h2>
           <p className="text-m font-semibold mb-4">Date: {entry.date}</p>
         </div>
-        
-        <div className=" w-screen mb-4">
-          <img  src={entry.imageUrl} alt="Full entry" />
+
+        <div className="w-full mb-4 border rounded mx-1 flex justify-center">
+          <img src={entry.imageUrl} alt="Full entry" />
         </div>
-        <p className='w-full p-2 border rounded'>{entry.content}</p>
-        <button
-          onClick={onClose}
-          className="px-4 py-2 bg-gray-300 rounded mr-2"
-        >
-          Close
-        </button>
+        <p className=" mx-1 w-full p-2 border rounded whitespace-normal break-words">
+          {entry.content}
+        </p>
+        <div className="flex justify-end mx-1 mt-2">
+          <button
+            onClick={onClose}
+            className="close-button px-4 py-2 bg-red-400 text-white rounded-[0.4rem] hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-opacity-50"
+          >
+            Close
+          </button>
+        </div>
+
       </div>
     </div>
   );

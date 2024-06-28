@@ -5,6 +5,8 @@ import EntryList from "./Components/Entrylist";
 function App() {
   const [isAddEntryModalOpen, setIsAddEntryModalOpen] = useState(false);
   const [entries, setEntries] = useState([]);
+  
+
 
   //Set data from localStorage
   useEffect(() => {
@@ -14,6 +16,7 @@ function App() {
       savedEntries.sort((a, b) => new Date(b.date) - new Date(a.date))
     );
   }, []);
+
 
   //Create new entry
   const handleSave = (newEntry) => {
@@ -34,6 +37,34 @@ function App() {
     setIsAddEntryModalOpen(false);
   };
 
+  const sortAsc = () => {
+    const sortedAsc = entries.toSorted(function(a,b){
+      // Turn your strings into dates, and then subtract them
+      // to get a value that is either negative, positive, or zero.
+      //sorts by newest date
+      return new Date(b.date) - new Date(a.date);
+    });
+    console.log(sortedAsc);
+    setEntries(sortedAsc);
+    
+    
+  }
+
+  
+  const sortDesc = () => {
+    const sortedDesc = entries.toSorted(function(a,b){
+      // Turn your strings into dates, and then subtract them
+      // to get a value that is either negative, positive, or zero.
+      //sorts by oldest date
+      return new Date(a.date) - new Date(b.date);
+    });
+    console.log(sortedDesc);
+    setEntries(sortedDesc);
+    
+  }
+    
+  
+  
   return (
     <div className="bg-[#E5E5E5]">
       <header
@@ -44,12 +75,19 @@ function App() {
         }}
       >
         <h1 className="text-2xl text-white">Personal Diary</h1>
+        <div>
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+          className="px-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
           onClick={() => setIsAddEntryModalOpen(true)}
         >
           Add Entry
         </button>
+        <button className='bg-px-4 mx-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700' onClick={() => sortAsc()}>
+          Sort By Newest 
+        </button>
+        <button className='bg-px-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700' onClick={() => sortDesc()}>
+          Sort By Oldest
+        </button></div>
       </header>
       <main>
         <EntryList entries={entries} />

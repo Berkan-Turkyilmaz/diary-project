@@ -56,18 +56,19 @@ function App() {
         }}
       >
         <h1 className="text-2xl text-white">Personal Diary</h1>
+        <div>
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+          className="px-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
           onClick={() => setIsAddEntryModalOpen(true)}
         >
           Add Entry
         </button>
-        <button className='bg-white' onClick={() => sortAsc()}>
-          sortAsc
+        <button className='bg-px-4 mx-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700' onClick={() => sortAsc()}>
+          Sort By Newest 
         </button>
-        <button className='bg-white' onClick={() => sortDesc()}>
-          sortDesc
-        </button>
+        <button className='bg-px-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700' onClick={() => sortDesc()}>
+          Sort By Oldest
+        </button></div>
       </header>
       <main >
         

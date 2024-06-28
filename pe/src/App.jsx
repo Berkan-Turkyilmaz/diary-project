@@ -5,7 +5,7 @@ import EntryList from "./Components/Entrylist";
 function App() {
   const [isAddEntryModalOpen, setIsAddEntryModalOpen] = useState(false);
   const [entries, setEntries] = useState([]);
-  const [oldest, setByOldest] = useState([]);
+  
 
 
   useEffect(() => {
